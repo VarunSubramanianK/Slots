@@ -38,8 +38,8 @@ def check_winnings(coloums,lines,bet,values):
             
 def get_slot_machine_spin(rows,cols,symbols):
     all_symbols=[]
-    for symbol,symbol_count in symbols.items():  ## .item() - gives you the value associated with both the key and item in one go
-        for _ in range(symbol_count):   ## "_" - we use it when don't care about the iteration value (anonymos variable)
+    for symbol,symbol_count in symbols.items():  
+        for _ in range(symbol_count):   
             all_symbols.append(symbol)
     coloums=[]
     for _ in range(cols):
@@ -54,9 +54,9 @@ def get_slot_machine_spin(rows,cols,symbols):
 
 def print_slot_machine(coloums):
     for row in range(len(coloums[0])):
-        for i,coloum in enumerate(coloums): ## enumerate - gived both the index and the value
+        for i,coloum in enumerate(coloums): 
             if i != len(coloums)-1:
-                print(coloum[row], end=" | ") ## end - defines what to do after completing the print statement. it is default to '/n'
+                print(coloum[row], end=" | ") 
             else:
                 print(coloum[row], end="")
         print()
@@ -99,7 +99,7 @@ def get_bet():
             if MIN_BET<=bet<=MAX_BET:
                 break
             else:
-                print(f"Enter a bet between {MIN_BET} and {MAX_BET}") ##Another way of printing variables (using f)
+                print(f"Enter a bet between {MIN_BET} and {MAX_BET}") 
         else:
             print("Please enter a valid Number")
     return bet
